@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.hela.wifi_analyser.first"
+    android:weightSum="4"
+    android:background="@color/primary_text_default_material_dark">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1.5"
+        android:background="@color/primary_dark_material_light" >
+
+        <TextView android:text="Connected to :"
+            android:layout_marginLeft="20dp"
+            android:textSize="15dp"
+            android:textColor="@color/abc_primary_text_disable_only_material_dark"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lll"/>
+
+
+     <TextView
+         android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SSID"
+            android:textColor="#F77748"
+            android:layout_marginLeft="5dp"
+            android:textStyle="italic"
+            android:layout_marginTop="20dp"
+            android:id="@+id/currentssid"/>
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="270dp">
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart1"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_above="@+id/seekBar1"
+        android:layout_weight="2.95" />
+</LinearLayout>
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="8dp"
+        android:layout_toLeftOf="@+id/tvYMax"
+        android:layout_marginRight="5dp"
+        android:max="200"
+        android:paddingBottom="12dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBar2"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="35dp"
+        android:layout_toLeftOf="@+id/tvXMax"
+        android:layout_marginRight="5dp"
+        android:max="500"
+        android:paddingBottom="12dp" />
+
+    <TextView
+        android:id="@+id/tvXMax"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/seekBar1"
+        android:layout_alignParentRight="true"
+        android:text="500"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="10dp"
+        android:gravity="right"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvYMax"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/seekBar2"
+        android:layout_alignParentRight="true"
+        android:text="500"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="10dp"
+        android:gravity="right"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</LinearLayout>
+

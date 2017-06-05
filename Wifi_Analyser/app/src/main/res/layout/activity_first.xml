@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.hela.wifi_analyser.first"
+    android:weightSum="4"
+    android:background="@color/primary_text_default_material_dark">
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/primary_dark_material_light">
+    <TextView android:text="Connected to :"
+        android:layout_marginLeft="20dp"
+        android:textSize="15dp"
+        android:textColor="@color/abc_primary_text_disable_only_material_dark"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lll"/>
+
+
+    <TextView  android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SSID"
+        android:textColor="#F77748"
+        android:layout_marginLeft="5dp"
+        android:textStyle="italic"
+        android:layout_marginTop="20dp"
+        android:id="@+id/currentssid"/>
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/abc_action_bar_stacked_max_height"
+    android:layout_weight="3.7">
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/material_blue_grey_800"
+        android:textColor="@color/bright_foreground_inverse_material_dark" >
+    </ListView>
+</LinearLayout>
+
+<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="75dp"
+
+    android:weightSum="1">
+         <Button android:layout_width="195dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+
+            android:layout_marginLeft="90dp"
+            android:background="@drawable/scann"
+            android:id="@+id/button"
+            android:layout_weight="0.07" />
+
+
+    <TextView  android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/speed"/>
+</LinearLayout>
+</LinearLayout>
